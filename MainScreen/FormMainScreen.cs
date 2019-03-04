@@ -18,7 +18,7 @@ namespace MainScreen
             showPicture();
         }
 
-        int numberCurrentPicture = 1;
+        int numberCurrentPicture = 0;
         void showPicture()
         {
             pictureBox1.Image = Image.FromFile("images/"+ ((numberCurrentPicture) % 18 + 1) + ".jpg");
