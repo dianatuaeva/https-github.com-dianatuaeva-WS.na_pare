@@ -25,6 +25,7 @@ namespace MainScreen
             foreach (var file in dir.GetFiles())
                 nameImages.Add(file.FullName);
             showpicture();
+            
         }
 
         void showpicture()

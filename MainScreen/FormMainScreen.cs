@@ -17,6 +17,7 @@ namespace MainScreen
         {
             InitializeComponent();
             sl = new Slider("images", new List<PictureBox> { pictureBox1, pictureBox2, pictureBox3 });
+            HistoryNBA.getHowoldNBA(labelInfo);
         }
 
        
