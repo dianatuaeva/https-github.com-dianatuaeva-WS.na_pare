@@ -19,17 +19,16 @@ namespace MainScreen
             sl = new Slider("images", new List<PictureBox> { pictureBox1, pictureBox2, pictureBox3 });
         }
 
-        void showPicture()
-        {
-            pictureBox1.Image = Image.FromFile("images/1.jpg");
-            pictureBox2.Image = Image.FromFile("images/2.jpg");
-            pictureBox3.Image = Image.FromFile("images/3.jpg");
-
-        }
+       
 
         private void buttonright_Click(object sender, EventArgs e)
         {
-           
+            sl.sliderRight();
+        }
+
+        private void buttonleft_Click(object sender, EventArgs e)
+        {
+            sl.sliderLeft();
         }
     }
 }

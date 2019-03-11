@@ -23,7 +23,8 @@ namespace MainScreen
             // получить список имен всех файлов из папки
             DirectoryInfo dir = new DirectoryInfo(nameFolder);
             foreach (var file in dir.GetFiles())
-                nameImages.Add(file.FullName);    
+                nameImages.Add(file.FullName);
+            showpicture();
         }
 
         void showpicture()
@@ -34,6 +35,15 @@ namespace MainScreen
             }
 
         }
-
+        public void sliderRight()
+        {
+            numberCurrentPicture = (numberCurrentPicture + pictures.Count) % nameImages.Count;
+            showpicture();
+        }
+        public void sliderLeft()
+        {
+            numberCurrentPicture = (numberCurrentPicture - pictures.Count+nameImages.Count) % nameImages.Count;
+            showpicture();
+        }
     }
 }

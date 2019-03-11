@@ -37,12 +37,12 @@
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.panelbutton = new System.Windows.Forms.Panel();
             this.panelphoto = new System.Windows.Forms.Panel();
-            this.buttonleft = new System.Windows.Forms.Button();
-            this.buttonright = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.buttonright = new System.Windows.Forms.Button();
+            this.buttonleft = new System.Windows.Forms.Button();
             this.panelinfo.SuspendLayout();
             this.paneltitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
@@ -141,29 +141,6 @@
             this.panelphoto.Size = new System.Drawing.Size(1038, 295);
             this.panelphoto.TabIndex = 4;
             // 
-            // buttonleft
-            // 
-            this.buttonleft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.buttonleft.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonleft.Location = new System.Drawing.Point(0, 0);
-            this.buttonleft.Name = "buttonleft";
-            this.buttonleft.Size = new System.Drawing.Size(44, 295);
-            this.buttonleft.TabIndex = 0;
-            this.buttonleft.Text = "<";
-            this.buttonleft.UseVisualStyleBackColor = true;
-            // 
-            // buttonright
-            // 
-            this.buttonright.Dock = System.Windows.Forms.DockStyle.Right;
-            this.buttonright.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonright.Location = new System.Drawing.Point(988, 0);
-            this.buttonright.Name = "buttonright";
-            this.buttonright.Size = new System.Drawing.Size(50, 295);
-            this.buttonright.TabIndex = 3;
-            this.buttonright.Text = ">";
-            this.buttonright.UseVisualStyleBackColor = true;
-            this.buttonright.Click += new System.EventHandler(this.buttonright_Click);
-            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 3;
@@ -213,6 +190,30 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
+            // 
+            // buttonright
+            // 
+            this.buttonright.Dock = System.Windows.Forms.DockStyle.Right;
+            this.buttonright.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonright.Location = new System.Drawing.Point(988, 0);
+            this.buttonright.Name = "buttonright";
+            this.buttonright.Size = new System.Drawing.Size(50, 295);
+            this.buttonright.TabIndex = 3;
+            this.buttonright.Text = ">";
+            this.buttonright.UseVisualStyleBackColor = true;
+            this.buttonright.Click += new System.EventHandler(this.buttonright_Click);
+            // 
+            // buttonleft
+            // 
+            this.buttonleft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.buttonleft.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonleft.Location = new System.Drawing.Point(0, 0);
+            this.buttonleft.Name = "buttonleft";
+            this.buttonleft.Size = new System.Drawing.Size(44, 295);
+            this.buttonleft.TabIndex = 0;
+            this.buttonleft.Text = "<";
+            this.buttonleft.UseVisualStyleBackColor = true;
+            this.buttonleft.Click += new System.EventHandler(this.buttonleft_Click);
             // 
             // FormMainScreen
             // 
