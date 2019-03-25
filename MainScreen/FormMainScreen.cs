@@ -31,5 +31,11 @@ namespace MainScreen
         {
             sl.sliderLeft();
         }
+
+        private void buttonVisitor_Click(object sender, EventArgs e)
+        {
+            visitormenu formvisitor = new visitormenu();
+            formvisitor.ShowDialog();
+        }
     }
 }

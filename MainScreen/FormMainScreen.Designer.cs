@@ -30,12 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMainScreen));
             this.panelinfo = new System.Windows.Forms.Panel();
-            this.labelInfo = new System.Windows.Forms.Label();
             this.paneltitle = new System.Windows.Forms.Panel();
             this.labelwelcom = new System.Windows.Forms.Label();
             this.labelmanangment = new System.Windows.Forms.Label();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.panelbutton = new System.Windows.Forms.Panel();
+            this.paneltobutton = new System.Windows.Forms.Panel();
+            this.buttonAdmin = new System.Windows.Forms.Button();
+            this.buttonVisitor = new System.Windows.Forms.Button();
             this.panelphoto = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -43,19 +45,17 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.buttonright = new System.Windows.Forms.Button();
             this.buttonleft = new System.Windows.Forms.Button();
-            this.paneltobutton = new System.Windows.Forms.Panel();
-            this.buttonVisitor = new System.Windows.Forms.Button();
-            this.buttonAdmin = new System.Windows.Forms.Button();
+            this.labelInfo = new System.Windows.Forms.Label();
             this.panelinfo.SuspendLayout();
             this.paneltitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.panelbutton.SuspendLayout();
+            this.paneltobutton.SuspendLayout();
             this.panelphoto.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.paneltobutton.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelinfo
@@ -67,17 +67,6 @@
             this.panelinfo.Name = "panelinfo";
             this.panelinfo.Size = new System.Drawing.Size(1038, 31);
             this.panelinfo.TabIndex = 0;
-            // 
-            // labelInfo
-            // 
-            this.labelInfo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelInfo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelInfo.Location = new System.Drawing.Point(0, 0);
-            this.labelInfo.Name = "labelInfo";
-            this.labelInfo.Size = new System.Drawing.Size(1038, 31);
-            this.labelInfo.TabIndex = 0;
-            this.labelInfo.Text = "The current season is 2016–2017, and the NBA already has a history of 71 years";
-            this.labelInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // paneltitle
             // 
@@ -137,6 +126,46 @@
             this.panelbutton.Name = "panelbutton";
             this.panelbutton.Size = new System.Drawing.Size(1038, 212);
             this.panelbutton.TabIndex = 3;
+            // 
+            // paneltobutton
+            // 
+            this.paneltobutton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.paneltobutton.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.paneltobutton.Controls.Add(this.buttonAdmin);
+            this.paneltobutton.Controls.Add(this.buttonVisitor);
+            this.paneltobutton.Location = new System.Drawing.Point(347, 50);
+            this.paneltobutton.Name = "paneltobutton";
+            this.paneltobutton.Size = new System.Drawing.Size(308, 100);
+            this.paneltobutton.TabIndex = 0;
+            // 
+            // buttonAdmin
+            // 
+            this.buttonAdmin.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonAdmin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(149)))), ((int)(((byte)(194)))));
+            this.buttonAdmin.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonAdmin.Location = new System.Drawing.Point(208, 17);
+            this.buttonAdmin.Name = "buttonAdmin";
+            this.buttonAdmin.Size = new System.Drawing.Size(76, 66);
+            this.buttonAdmin.TabIndex = 1;
+            this.buttonAdmin.Text = "Admin";
+            this.buttonAdmin.UseVisualStyleBackColor = false;
+            // 
+            // buttonVisitor
+            // 
+            this.buttonVisitor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonVisitor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(149)))), ((int)(((byte)(194)))));
+            this.buttonVisitor.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonVisitor.Location = new System.Drawing.Point(14, 17);
+            this.buttonVisitor.Name = "buttonVisitor";
+            this.buttonVisitor.Size = new System.Drawing.Size(76, 66);
+            this.buttonVisitor.TabIndex = 0;
+            this.buttonVisitor.Text = "Visitor";
+            this.buttonVisitor.UseVisualStyleBackColor = false;
+            this.buttonVisitor.Click += new System.EventHandler(this.buttonVisitor_Click);
             // 
             // panelphoto
             // 
@@ -224,44 +253,16 @@
             this.buttonleft.UseVisualStyleBackColor = true;
             this.buttonleft.Click += new System.EventHandler(this.buttonleft_Click);
             // 
-            // paneltobutton
+            // labelInfo
             // 
-            this.paneltobutton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.paneltobutton.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.paneltobutton.Controls.Add(this.buttonAdmin);
-            this.paneltobutton.Controls.Add(this.buttonVisitor);
-            this.paneltobutton.Location = new System.Drawing.Point(347, 50);
-            this.paneltobutton.Name = "paneltobutton";
-            this.paneltobutton.Size = new System.Drawing.Size(308, 100);
-            this.paneltobutton.TabIndex = 0;
-            // 
-            // buttonVisitor
-            // 
-            this.buttonVisitor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonVisitor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(149)))), ((int)(((byte)(194)))));
-            this.buttonVisitor.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonVisitor.Location = new System.Drawing.Point(14, 17);
-            this.buttonVisitor.Name = "buttonVisitor";
-            this.buttonVisitor.Size = new System.Drawing.Size(76, 66);
-            this.buttonVisitor.TabIndex = 0;
-            this.buttonVisitor.Text = "Visitor";
-            this.buttonVisitor.UseVisualStyleBackColor = false;
-            // 
-            // buttonAdmin
-            // 
-            this.buttonAdmin.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonAdmin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(149)))), ((int)(((byte)(194)))));
-            this.buttonAdmin.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonAdmin.Location = new System.Drawing.Point(208, 17);
-            this.buttonAdmin.Name = "buttonAdmin";
-            this.buttonAdmin.Size = new System.Drawing.Size(76, 66);
-            this.buttonAdmin.TabIndex = 1;
-            this.buttonAdmin.Text = "Admin";
-            this.buttonAdmin.UseVisualStyleBackColor = false;
+            this.labelInfo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelInfo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelInfo.Location = new System.Drawing.Point(0, 0);
+            this.labelInfo.Name = "labelInfo";
+            this.labelInfo.Size = new System.Drawing.Size(1038, 31);
+            this.labelInfo.TabIndex = 0;
+            this.labelInfo.Text = "The current season is 2016–2017, and the NBA already has a history of 71 years";
+            this.labelInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormMainScreen
             // 
@@ -278,12 +279,12 @@
             this.paneltitle.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.panelbutton.ResumeLayout(false);
+            this.paneltobutton.ResumeLayout(false);
             this.panelphoto.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.paneltobutton.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -291,7 +292,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panelinfo;
-        private System.Windows.Forms.Label labelInfo;
         private System.Windows.Forms.Panel paneltitle;
         private System.Windows.Forms.Panel panelbutton;
         private System.Windows.Forms.Panel panelphoto;
@@ -307,6 +307,7 @@
         private System.Windows.Forms.Panel paneltobutton;
         private System.Windows.Forms.Button buttonAdmin;
         private System.Windows.Forms.Button buttonVisitor;
+        private System.Windows.Forms.Label labelInfo;
     }
 }
 
